@@ -19,3 +19,7 @@ else
 fi
 
 echo 0 > /sys/class/miyooio_chr_dev/joy_type
+
+# clear the FB to get rid of residual Loading screen if present
+touch /tmp/fbdisplay_exit
+cat /dev/zero > /dev/fb0
